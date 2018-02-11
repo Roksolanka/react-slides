@@ -5,11 +5,6 @@
 #### Roksolana Fedkovych
 
 ---
-![alt](http://beetlereader.com/wp-content/uploads/2016/06/all_features.png)
-![alt](http://hosen-shituf.gov.il/sites/default/files/new-images/icon22.jpg)
-![alt](http://vbu.ac.in/wp-content/uploads/2015/08/books-2.png)
-![alt](http://cdn.differencebetween.net/wp-content/uploads/2012/01/Difference-Between-Example-and-Sample.jpg)
----
 
 # What is React.js?
 ---
@@ -101,6 +96,18 @@ Manipulating the DOM is slow. Manipulating the virtual DOM is much faster, becau
 JSX is an XML/HTML-like syntax used by React that extends ECMAScript so that XML/HTML-like text can co-exist with JavaScript/React code. The syntax is intended to be used by preprocessors (i.e., transpilers like Babel) to transform HTML-like text found in JavaScript files into standard JavaScript objects that a JavaScript engine will parse
 
 -- --
+
+## Syntax
+
+```jsx
+const element = <img className="userAvatar" src={this.props.user.avatarUrl}></img>;
+```
+
+```jsx
+const element = <img src={this.getImageScr()} />;
+```
+
+-- --
 ![alt](http://blog.tamizhvendan.in/images/react-hello-world/babel-loader.png)
 -- --
 
@@ -175,7 +182,7 @@ function Welcome(props) {
 ```jsx
 class Welcome extends React.Component {
   render() {
-    return <h1>Hello, {props.name}</h1>;
+    return <h1>Hello, {this.props.name}</h1>;
   }
 }
 
@@ -231,8 +238,8 @@ ReactDOM.render(
 function Avatar(props) {
   return (
     <img className="avatar"
-      src={props.src}
-      alt={props.alt}
+      src={this.props.src}
+      alt={this.props.alt}
     />
   );
 }
@@ -244,8 +251,8 @@ function Comment(props) {
     <div className="comment">
       <div className="user-info">
         <Avatar 
-          src={props.author.image.src}
-          alt={props.author.fullName}
+          src={this.props.author.image.src}
+          alt={this.props.author.fullName}
         />
       </div>
   ....
