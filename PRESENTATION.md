@@ -540,14 +540,6 @@ export default Display;
 
 # Server-Side React Rendering
 
--- --
-
-### The Benefits of Server-Side Rendering
-
-* Displays pages faster.
-* SEO.
-* Meta tags powering link previews.
-
 ---
 
 # Thanks!
